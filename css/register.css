@@ -6,11 +6,21 @@ body{
 	background-size: cover;
 }
 
+i{
+	padding-left: 50%;
+	color: white;
+}
+
+.msg{
+	padding-left: 50%;
+	color: white;
+}
+
 .registerbox{
 	width: 280px;
 	position: absolute;
 	top: 50%;
-	left: 70%;
+	left: 50%;
 	color: white;
 	transform: translate(-50%, -50%);
 }
@@ -24,7 +34,7 @@ body{
 }
 
 .textbox{
-	width: = 100%;
+	width: 100%;
 	overflow: hidden;
 	font-size: 20px;
 	padding: 8px 0;

@@ -1,12 +1,9 @@
 <?php
 include "header.php";
 include "../config/setup.php";
-include "login.php";
 
 try{
     $conn = new PDO($DB_DSNM, $DB_USER, $DB_PASSWORD);
-
-
     $user = $_GET['username'];
 
     if ($_POST['new_user'])
@@ -36,7 +33,8 @@ catch(PDOException $e){
             <h1>Enter Your New Username<h1>
             <form action="" method="post">
               <input class="button" type="username" name="new_username" placeholder="Enter your username" required/><br/><br/>
-              <input class="button" type="submit" name="new_user" value="Change Username"/>
+              <input class="button" type="submit" name="new_user"/>
+              <a href="logout.php">Log Out</a><br/>
             </form>
         </div>
     </body>

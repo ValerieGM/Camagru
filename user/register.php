@@ -1,35 +1,40 @@
 <?php
 include "../config/setup.php";
 
-try{
+try {
 	$conn = new PDO($DB_DSNM, $DB_USER, $DB_PASSWORD);
 
-	if (isset($_POST['register'])){
+	if (isset($_POST['register'])) {
 		$username = $_POST['username'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		$hashed_password = md5($password);
 
-		$insert = $conn->prepare("INSERT INTO users(username, email, password) values(:username, :email, :password)");
+		if (ctype_upper($password) || ctype_lower($password) || strlen($password) < 6) {
+			header("Location: incorrect.php");
+		} else {
+			$hashed_password = md5($password);
 
-		$insert->bindParam(':username', $username);
-		$insert->bindParam(':email', $email);
-		$insert->bindParam(':password', $hashed_password);
+			$insert = $conn->prepare("INSERT INTO users(username, email, password) values(:username, :email, :password)");
 
-		$insert->execute();
+			$insert->bindParam(':username', $username);
+			$insert->bindParam(':email', $email);
+			$insert->bindParam(':password', $hashed_password);
 
-		header("location:verify.php?email=$email");
+			$insert->execute();
+
+			header("location: email.php?email=$email");
+		}
 	}
-}
-catch(PDOException $e){
-	echo "Error: ".$e->getMessage();
+} catch (PDOException $e) {
+	echo "Error: " . $e->getMessage();
 }
 ?>
+
 <html>
 	<head>
 		<title>Register</title>
 			<link rel="stylesheet" href="../css/register.css">
-			<?php include "header.php";?>
+			<?php include "header.php"; ?>
 			<body>
 				<form method="post">
 			<div class="registerbox">
@@ -45,6 +50,6 @@ catch(PDOException $e){
 			</div>
 					<input class="button" type="submit" name="register" value="Register">
 			</div>
-			</form>
+			</form>	
 			</body>
 </html>

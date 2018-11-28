@@ -11,7 +11,7 @@ try{
             if (isset($_POST['recovery_mail']))
             {
                 $email = $_POST['recovery_mail'];
-                $new = "bfsdofn";
+                $new = "AbvjkdbvkHG123";
                 $encrypt = md5($new);
                 $insert = $conn->prepare("UPDATE users SET password = '$encrypt' WHERE email = '$email'");
 

@@ -1,23 +1,37 @@
 <?php
-include "register.php";
+include "../config/setup.php";
+include "header.php";
 
-$email = $_GET['email'];
+try {
+    $conn = new PDO($DB_DSNM, $DB_USER, $DB_PASSWORD);
 
-$to = $email;
-$subject = "Account Verification";
-$message = '
-Thanks for signing up!
-Your account has been created, you can login with the following credentials after you have activated your account by pressing the url below.
- 
-------------------------
-Username: '.$username.'
-------------------------
- 
-Please click this link to activate your account:
-http://localhost:8080/Camagru/user/login.php?email='.$email.'
-';
+    $omail = $_GET['email'];
+    if (isset($_POST['verify'])) {
+            //$name = $_POST['new_email'];
+    
+            $insert = $conn->prepare("UPDATE users SET verify = 1 WHERE email = '$omail'");
+            //header('location:login.php');
+            //$insert->bindParam(':verify', 1);
 
-$headers = 'From:noreply@camagru.com';
-mail($to, $subject, $message, $headers);
-echo "<p style='color: skyblue;'>Please click on the link sent to your email to verify account.</p>";
+            $insert->execute();
+            header('location: login.php');
+        }
+
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+
 ?>
+
+<html>
+    <link rel="stylesheet" href="../css/login.css">
+    <body>
+        <div class="loginbox">
+            <h1>Verification</h1><br>
+            <p>Click the verify button<p>
+            <form method="POST">
+              <input class="button" type="submit" name="verify" value="Verify"/>
+            </form>
+        </div>
+    </body>
+</html>

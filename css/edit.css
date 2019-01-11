@@ -1,0 +1,39 @@
+body {
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(land8.jpg);
+    overflow-x: hidden;
+}
+
+.container_gallery{
+    margin: 0 auto;
+    width: 50%; 
+}
+
+hr{
+    border: lightskyblue;
+}
+
+strong{
+    color: darkblue;
+    font-size: 30px;
+    border-bottom: 1px solid darkblue;
+}
+
+.comment {
+    height: 70px;
+    width: 90%;
+    border-color: #333;
+    border-radius: 10px,
+}
+
+.col-sm-3{
+padding:20px;
+float:left;
+width:33.3%;
+}
+
+/* .meanie img{
+width: 70%;
+} */

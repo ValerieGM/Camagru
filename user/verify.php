@@ -7,15 +7,10 @@ try {
 
     $omail = $_GET['email'];
     if (isset($_POST['verify'])) {
-            //$name = $_POST['new_email'];
-    
-            $insert = $conn->prepare("UPDATE users SET verify = 1 WHERE email = '$omail'");
-            //header('location:login.php');
-            //$insert->bindParam(':verify', 1);
-
-            $insert->execute();
-            header('location: login.php');
-        }
+        $insert = $conn->prepare("UPDATE users SET verify = 1 WHERE email = '$omail'");
+        $insert->execute();
+        header('location: login.php');
+    }
 
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
@@ -24,6 +19,11 @@ try {
 ?>
 
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
     <link rel="stylesheet" href="../css/login.css">
     <body>
         <div class="loginbox">

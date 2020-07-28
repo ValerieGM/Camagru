@@ -14,7 +14,7 @@ include 'header.php';
 <form method="post">
 			<div class="registerbox">
 				<h1>Update</h1>
-				<link rel="stylesheet" href="../css/modify.css">
+				<link rel="stylesheet" href="../css/images/modify.css">
 				<a href="change_username.php?username=<?PHP $a =$_GET['username']; echo $a;?>">Change Username</a><br/>
 				<a href="change_email.php?email=<?PHP $b =$_GET['email']; echo $b;?>">Change Email</a><br/>
 				<a href="notification.php?email=<?PHP $b =$_GET['email']; echo $b;?>">Notification Preference</a><br/>

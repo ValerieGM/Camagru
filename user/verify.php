@@ -24,7 +24,7 @@ try {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/images/login.css">
     <body>
         <div class="loginbox">
             <h1>Verification</h1><br>

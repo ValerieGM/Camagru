@@ -21,7 +21,7 @@ try {
 ?>
 
 <html>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/images/login.css">
     <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

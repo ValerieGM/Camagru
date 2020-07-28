@@ -37,7 +37,7 @@ if(isset($_POST['btn-add'])){
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Media</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="../css/webcam.css">
+	<link rel="stylesheet" href="../css/images/webcam.css">
 </head>
 <body>
 <br/>

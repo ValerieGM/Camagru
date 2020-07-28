@@ -36,7 +36,7 @@ try {
  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Register</title>
-			<link rel="stylesheet" href="../css/register.css">
+			<link rel="stylesheet" href="../css/images/register.css">
 			<?php include "header.php"; ?>
 			<body>
 				<form method="post">

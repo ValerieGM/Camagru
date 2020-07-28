@@ -1,5 +1,5 @@
 <html>
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/images/header.css">
     <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     </head>
     <body>
         <div class="logo">
-            <a href="#"><img src="../css/logo.png"></a>
+            <a href="#"><img src="../css/images/logo.png"></a>
         </div>
         <nav>
             <ul>

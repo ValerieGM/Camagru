@@ -7,7 +7,7 @@ Apps users should be able to select an image in a list of superposable images, t
 ### Requirements
 #### Linux
 * php 7.2
-* LAMP: https://bitnami.com/stack/mamp
+* LAMP: https://bitnami.com/stack/lamp
 
 ### Executing
 
